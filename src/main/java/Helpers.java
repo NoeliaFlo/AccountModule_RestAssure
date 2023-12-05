@@ -10,19 +10,11 @@ public class Helpers {
     public static String getAccountUrl() {
         return getBaseUrl() + "/Account/v1/User";
     }
-
-    public static void setUserID(String userIdFromRequest){
-        userId = userIdFromRequest;
+    public static String getTokenUrl() {
+        return getBaseUrl() + "/Account/v1/GenerateToken";
+    }
+    public static String getAuthorizedUrl() {
+        return getBaseUrl() + "/Account/v1/Authorized";
     }
 
-    public static String getUserID(){
-        return userId;
-    }
-    public static String getUsername(){
-        return username;
-    }
-
-    public static String getPassword(){
-        return password;
-    }
 }

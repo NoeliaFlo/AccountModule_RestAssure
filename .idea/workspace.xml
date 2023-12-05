@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94692ec-47e4-4dad-b343-1323ac025a11" name="Changes" comment="POST Create account">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Helpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helpers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CRUDAccountModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CRUDAccountModule.java" afterDir="false" />
@@ -38,13 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Account__Noe"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="TestNG.CRUDAccountModule.authorizedSuccess">
+    <configuration name="CRUDAccountModule.authorizedSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AccountModule_RestAssure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CRUDAccountModule" />
+      <option name="METHOD_NAME" value="authorizedSuccess" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CRUDAccountModule.createAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AccountModule_RestAssure" />
       <option name="PACKAGE_NAME" value="" />
@@ -57,8 +72,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CRUDAccountModule.getToken" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AccountModule_RestAssure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CRUDAccountModule" />
+      <option name="METHOD_NAME" value="getToken" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CRUDAccountModule.authorizedSuccess" />
+        <item itemvalue="TestNG.CRUDAccountModule.getToken" />
         <item itemvalue="TestNG.CRUDAccountModule.createAccount" />
       </list>
     </recent_temporary>
