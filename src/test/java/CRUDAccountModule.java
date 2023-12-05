@@ -87,6 +87,20 @@ public class CRUDAccountModule {
             .log().all();
     }
 
+    @Test(priority = 4)
+    void deleteUserByID(){
+        String deleteUserByUserIDUrl = Helpers.getUserByUserIDUrl()+ Helpers.userId;
+
+        given()
+                .header("Accept", "application/json")
+                .header("Authorization", "Bearer " + Helpers.token)
+        .when()
+                .get(deleteUserByUserIDUrl)
+        .then()
+                .statusCode(200)
+                .log().all();
+    }
+
 }
 
 
