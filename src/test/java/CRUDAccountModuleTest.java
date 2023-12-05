@@ -5,15 +5,15 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class CRUDAccountModule {
+public class CRUDAccountModuleTest {
 
     @Test(priority = 0)
     void createAccount(){
-        String postUrl = Helpers.getAccountUrl();
+        String postUrl = Helper.getAccountUrl();
 
         JSONObject requestBody = new JSONObject()
-                .put("userName", Helpers.username)
-                .put("password", Helpers.password);
+                .put("userName", Helper.username)
+                .put("password", Helper.password);
 
         Response response = given()
                                 .header("Accept", "application/json")
@@ -27,16 +27,16 @@ public class CRUDAccountModule {
                                 .extract()
                                 .response();
 
-        Helpers.userId = response.jsonPath().getString("userID");
+        Helper.userId = response.jsonPath().getString("userID");
     }
 
     @Test (priority = 1)
     void getToken(){
-        String tokenUrl = Helpers.getTokenUrl();
+        String tokenUrl = Helper.getTokenUrl();
 
         JSONObject requestBody = new JSONObject()
-                .put("userName", Helpers.username)
-                .put("password", Helpers.password);
+                .put("userName", Helper.username)
+                .put("password", Helper.password);
 
         Response response = given()
                                 .header("Accept", "application/json")
@@ -50,17 +50,17 @@ public class CRUDAccountModule {
                                 .extract()
                                 .response();
 
-        Helpers.token  = response.jsonPath().getString("token");
-        System.out.println(Helpers.token);
+        Helper.token  = response.jsonPath().getString("token");
+        System.out.println(Helper.token);
     }
 
     @Test (priority = 2)
     void authorizedSuccess(){
-        String authorizedUrl = Helpers.getAuthorizedUrl();
+        String authorizedUrl = Helper.getAuthorizedUrl();
 
         JSONObject requestBody = new JSONObject()
-                .put("userName", Helpers.username)
-                .put("password", Helpers.password);
+                .put("userName", Helper.username)
+                .put("password", Helper.password);
 
         given()
             .header("Accept", "application/json")
@@ -75,11 +75,11 @@ public class CRUDAccountModule {
 
     @Test(priority = 3)
     void getUserSuccess(){
-        String userByUserIDUrl = Helpers.getUserByUserIDUrl()+ Helpers.userId;
+        String userByUserIDUrl = Helper.getUserByUserIDUrl()+ Helper.userId;
 
         given()
             .header("Accept", "application/json")
-            .header("Authorization", "Bearer " + Helpers.token)
+            .header("Authorization", "Bearer " + Helper.token)
         .when()
                 .get(userByUserIDUrl)
         .then()
@@ -89,11 +89,11 @@ public class CRUDAccountModule {
 
     @Test(priority = 4)
     void deleteUserByID(){
-        String deleteUserByUserIDUrl = Helpers.getUserByUserIDUrl()+ Helpers.userId;
+        String deleteUserByUserIDUrl = Helper.getUserByUserIDUrl()+ Helper.userId;
 
         given()
                 .header("Accept", "application/json")
-                .header("Authorization", "Bearer " + Helpers.token)
+                .header("Authorization", "Bearer " + Helper.token)
         .when()
                 .delete(deleteUserByUserIDUrl)
         .then()

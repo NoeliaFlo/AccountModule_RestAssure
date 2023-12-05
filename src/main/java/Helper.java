@@ -1,4 +1,4 @@
-public class Helpers {
+public class Helper {
     static String username = "JuanSandroxd";
     static String password = "JtEPshHpXEi_jPu@854";
     static String userId;
