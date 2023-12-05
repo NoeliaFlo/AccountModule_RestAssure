@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94692ec-47e4-4dad-b343-1323ac025a11" name="Changes" comment="POST Create account">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Helpers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CRUDAccountModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CRUDAccountModule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +42,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "jorge",
-    "last_opened_file_path": "C:/Users/geoxt/OneDrive/Escritorio/API Testing/AccountModule_RestAssure"
+    "last_opened_file_path": "C:/Users/geoxt/OneDrive/Escritorio/API Testing/Rest_assured/Practice_1/Practice_1"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="CRUDAccountModule.createUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AccountModule_RestAssure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CRUDAccountModule" />
+      <option name="METHOD_NAME" value="createUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.CRUDAccountModule.createUser" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,5 +99,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="POST Create account" />
     <option name="LAST_COMMIT_MESSAGE" value="POST Create account" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/CRUDAccountModule.java</url>
+          <line>8</line>
+          <properties class="CRUDAccountModule" method="createUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/CRUDAccountModule.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
