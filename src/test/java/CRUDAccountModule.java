@@ -95,7 +95,7 @@ public class CRUDAccountModule {
                 .header("Accept", "application/json")
                 .header("Authorization", "Bearer " + Helpers.token)
         .when()
-                .get(deleteUserByUserIDUrl)
+                .delete(deleteUserByUserIDUrl)
         .then()
                 .statusCode(200)
                 .log().all();
