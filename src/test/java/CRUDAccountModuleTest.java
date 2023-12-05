@@ -100,7 +100,6 @@ public class CRUDAccountModuleTest {
                 .statusCode(200)
                 .log().all();
     }
-
 }
 
 
