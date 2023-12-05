@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class CRUDAccountModule {
 
-    @Test
+    @Test(priority = 0)
     void createAccount(){
         String postUrl = Helpers.getAccountUrl();
 
@@ -28,10 +28,9 @@ public class CRUDAccountModule {
                                 .response();
 
         Helpers.userId = response.jsonPath().getString("userID");
-        System.out.println(Helpers.userId);
     }
 
-    @Test
+    @Test (priority = 1)
     void getToken(){
         String tokenUrl = Helpers.getTokenUrl();
 
@@ -52,9 +51,10 @@ public class CRUDAccountModule {
                                 .response();
 
         Helpers.token  = response.jsonPath().getString("token");
+        System.out.println(Helpers.token);
     }
 
-    @Test
+    @Test (priority = 2)
     void authorizedSuccess(){
         String authorizedUrl = Helpers.getAuthorizedUrl();
 
@@ -70,6 +70,20 @@ public class CRUDAccountModule {
             .post(authorizedUrl)
         .then()
             .statusCode(200).body(equalTo("true"))
+            .log().all();
+    }
+
+    @Test(priority = 3)
+    void getUserSuccess(){
+        String userByUserIDUrl = Helpers.getUserByUserIDUrl()+ Helpers.userId;
+
+        given()
+            .header("Accept", "application/json")
+            .header("Authorization", "Bearer " + Helpers.token)
+        .when()
+                .get(userByUserIDUrl)
+        .then()
+            .statusCode(200)
             .log().all();
     }
 
