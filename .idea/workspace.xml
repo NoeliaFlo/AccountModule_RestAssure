@@ -36,13 +36,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Account__Noe"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="TestNG.CRUDAccountModule.authorizedSuccess">
+    <configuration name="CRUDAccountModule.authorizedSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AccountModule_RestAssure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CRUDAccountModule" />
+      <option name="METHOD_NAME" value="authorizedSuccess" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CRUDAccountModule.createAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AccountModule_RestAssure" />
       <option name="PACKAGE_NAME" value="" />
@@ -55,8 +69,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CRUDAccountModule.getToken" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AccountModule_RestAssure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CRUDAccountModule" />
+      <option name="METHOD_NAME" value="getToken" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CRUDAccountModule.authorizedSuccess" />
+        <item itemvalue="TestNG.CRUDAccountModule.getToken" />
         <item itemvalue="TestNG.CRUDAccountModule.createAccount" />
       </list>
     </recent_temporary>

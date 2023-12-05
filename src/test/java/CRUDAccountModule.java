@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class CRUDAccountModule {
 
@@ -11,8 +12,8 @@ public class CRUDAccountModule {
         String postUrl = Helpers.getAccountUrl();
 
         JSONObject requestBody = new JSONObject()
-                .put("userName", Helpers.getUsername())
-                .put("password", Helpers.getPassword());
+                .put("userName", Helpers.username)
+                .put("password", Helpers.password);
 
         Response response = given()
                                 .header("Accept", "application/json")
@@ -26,8 +27,52 @@ public class CRUDAccountModule {
                                 .extract()
                                 .response();
 
-        String userId = response.jsonPath().getString("userID");
-        Helpers.setUserID(userId);
-        System.out.println(userId);
+        Helpers.userId = response.jsonPath().getString("userID");
+        System.out.println(Helpers.userId);
     }
+
+    @Test
+    void getToken(){
+        String tokenUrl = Helpers.getTokenUrl();
+
+        JSONObject requestBody = new JSONObject()
+                .put("userName", Helpers.username)
+                .put("password", Helpers.password);
+
+        Response response = given()
+                                .header("Accept", "application/json")
+                                .header("Content-Type", "application/json")
+                                .body(requestBody.toString())
+                            .when()
+                                .post(tokenUrl)
+                            .then()
+                                .statusCode(200)
+                                .log().all()
+                                .extract()
+                                .response();
+
+        Helpers.token  = response.jsonPath().getString("token");
+    }
+
+    @Test
+    void authorizedSuccess(){
+        String authorizedUrl = Helpers.getAuthorizedUrl();
+
+        JSONObject requestBody = new JSONObject()
+                .put("userName", Helpers.username)
+                .put("password", Helpers.password);
+
+        given()
+            .header("Accept", "application/json")
+            .header("Content-Type", "application/json")
+            .body(requestBody.toString())
+        .when()
+            .post(authorizedUrl)
+        .then()
+            .statusCode(200).body(equalTo("true"))
+            .log().all();
+    }
+
 }
+
+
